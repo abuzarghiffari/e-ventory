@@ -13,6 +13,6 @@ class Items extends CI_Controller
   {
     $data['title'] = 'Items';
     $data['items'] = $this->Items_model->getItems('items');
-    $this->load->view('items/page-item', $data);
+    $this->load->view('items/view-item', $data);
   }
 }
