@@ -29,7 +29,7 @@
     Menu
   </div>
 
-  <!-- Nav Item - Tables -->
+  <!-- Nav Item - Products -->
   <li class="nav-item
       <?= $this->uri->segment(1) == 'products' ? 'active' : ''; ?>">
     <a class="nav-link" href="<?= base_url(); ?>products">
@@ -38,21 +38,21 @@
     </a>
   </li>
 
-  <!-- Nav Item - Tables -->
-  <li class="nav-item
-      <?= $this->uri->segment(1) == 'categories' ? 'active' : ''; ?>">
-    <a class="nav-link" href="<?= base_url(); ?>categories">
-      <i class="fas fa-fw fa-table"></i>
-      <span>Categories</span>
-    </a>
-  </li>
-
-  <!-- Nav Item - Charts -->
+  <!-- Nav Item - Items -->
   <li class="nav-item
       <?= $this->uri->segment(1) == 'items' ? 'active' : ''; ?>">
     <a class="nav-link" href="<?= base_url(); ?>items">
       <i class="fas fa-shopping-basket"></i>
       <span>Items</span>
+    </a>
+  </li>
+
+  <!-- Nav Item - Categories -->
+  <li class="nav-item
+      <?= $this->uri->segment(1) == 'categories' ? 'active' : ''; ?>">
+    <a class="nav-link" href="<?= base_url(); ?>categories">
+      <i class="fas fa-table"></i>
+      <span>Categories</span>
     </a>
   </li>
 
