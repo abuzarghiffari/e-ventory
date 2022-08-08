@@ -21,24 +21,40 @@
           <thead>
             <tr>
               <th>No</th>
-              <th>Name Items</th>
-              <th>Name Items</th>
-              <th>Action</th>
+              <th>Items Name</th>
+              <th>Categories Name</th>
+              <th>Stock</th>
+              <th>Price</th>
             </tr>
           </thead>
+
+
           <tbody>
-            <tr>
-              <td>27</td>
-              <td>Donna Snider</td>
-              <td>Customer Support</td>
-              <td>
-                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-pen"></i></a>
-                <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">
-                  <i class="fas fa-trash"></i>
-                </a>
-              </td>
-            </tr>
+            <?php if (!empty($products)) { ?>
+              <?php
+              $no = 1;
+              foreach ($products as $ctr) : ?>
+                <tr>
+                  <td><?= $no++ ?></td>
+                  <td><?= $ctr->name_items ?></td>
+                  <td><?= $ctr->name_categories ?></td>
+                  <td><?= $ctr->price ?></td>
+                  <td><?= $ctr->stock ?></td>
+                  <td>
+                    <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-pen"></i></a>
+                    <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">
+                      <i class="fas fa-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+              <?php endforeach; ?>
+            <?php } else { ?>
+              <td colspan="4" class="text-center">No Data items</td>
+            <?php } ?>
           </tbody>
+
+
+
         </table>
       </div>
     </div>
