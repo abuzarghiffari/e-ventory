@@ -4,9 +4,8 @@
     <div class="copyright text-center my-auto">
       <span>Copyright
         &copy;
-        Your
-        Website
-        2021</span>
+        e-ventory 2022
+      </span>
     </div>
   </div>
 </footer>
