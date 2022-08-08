@@ -4,9 +4,13 @@
     <div class="copyright text-center my-auto">
       <span>Copyright
         &copy;
-        e-ventory 2022
+        E-Ventory 2022
       </span>
     </div>
   </div>
 </footer>
 <!-- End of Footer -->
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+</a>
