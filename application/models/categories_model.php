@@ -16,6 +16,12 @@ class Categories_model extends CI_Model
     $this->db->insert('categories', $data);
   }
 
+  public function detail_data($id_categories)
+  {
+    $this->db->where('id_categories', $id_categories);
+    return $this->db->get('categories')->row();
+  }
+
   public function update_data($where, $data, $table)
   {
     $this->db->where($where);
@@ -25,7 +31,6 @@ class Categories_model extends CI_Model
   public function delete_data($id_categories)
   {
     $this->db->where('id_categories', $id_categories);
-    $result = $this->db->delete('categories');
-    return $result;
+    return $this->db->delete('categories');
   }
 }

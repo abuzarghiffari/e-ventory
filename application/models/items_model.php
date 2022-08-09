@@ -15,4 +15,22 @@ class Items_model extends CI_Model
   {
     $this->db->insert('items', $data);
   }
+
+  public function detail_data($id_items)
+  {
+    $this->db->where('id_items', $id_items);
+    return $this->db->get('items')->row();
+  }
+
+  public function update_data($where, $data, $table)
+  {
+    $this->db->where($where);
+    $this->db->update($table, $data);
+  }
+
+  public function delete_data($id_items)
+  {
+    $this->db->where('id_items', $id_items);
+    return $this->db->delete('items');
+  }
 }

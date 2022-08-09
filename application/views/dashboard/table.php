@@ -22,24 +22,20 @@
             </tr>
           </thead>
           <tbody>
-            <?php if (!empty($products)) { ?>
-              <?php
-              $no = 1;
-              foreach ($products as $pdr) : ?>
-                <tr>
-                  <td><?= $no++ ?></td>
-                  <td><?= $pdr->name_items ?></td>
-                  <td><?= $pdr->name_categories ?></td>
-                  <td>$<?= $pdr->price ?></td>
-                  <td><?= $pdr->stock ?></td>
-                  <td>
-                    <a href="<?= base_url(); ?>products" class="btn btn-warning btn-sm"><i class="fas fa-eye"></i></a>
-                  </td>
-                </tr>
-              <?php endforeach; ?>
-            <?php } else { ?>
-              <td colspan="6" class="text-center">No Data Produts</td>
-            <?php } ?>
+            <?php
+            $no = 1;
+            foreach ($products as $pdr) : ?>
+              <tr>
+                <td><?= $no++ ?></td>
+                <td><?= $pdr->name_items ?></td>
+                <td><?= $pdr->name_categories ?></td>
+                <td>$<?= $pdr->price ?></td>
+                <td><?= $pdr->stock ?></td>
+                <td>
+                  <a href="<?= base_url(); ?>products" class="btn btn-success btn-circle btn-sm"><i class="fas fa-eye"></i></a>
+                </td>
+              </tr>
+            <?php endforeach; ?>
           </tbody>
         </table>
       </div>
