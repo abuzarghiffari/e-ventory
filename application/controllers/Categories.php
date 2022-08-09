@@ -11,16 +11,23 @@ class Categories extends CI_Controller
 
   public function index()
   {
-    $data['title'] = 'Categories';
-    $data['categories'] = $this->Categories_model->getCategories('categories');
-    $this->load->view('categories/view-category', $data);
+    $data = [
+      'title' => 'Categories',
+      'content' => 'categories/page',
+      'categories' => $this->Categories_model->getCategories('categories')
+    ];
+    $this->load->view('layout', $data);
   }
 
   public function insert()
   {
     $this->_rules();
     if ($this->form_validation->run() == FALSE) {
-      //
+      $data = [
+        'title' => 'Create Category',
+        'content' => 'categories/add',
+      ];
+      $this->load->view('layout', $data);
     } else {
       $data = array(
         'code_categories' => $this->input->post('code_categories', TRUE),
@@ -40,38 +47,48 @@ class Categories extends CI_Controller
     }
   }
 
-  public function update()
+  public function update($id)
   {
-    $id = $this->input->post('id_categories', TRUE);
-    $code_categories = $this->input->post('code_categories', TRUE);
-    $name_categories = $this->input->post('name_categories', TRUE);
+    $this->_rules();
+    if ($this->form_validation->run() == FALSE) {
+      $data = [
+        'title' => 'Update Category',
+        'content' => 'categories/edit',
+        'categories' => $this->Categories_model->detail_data($id)
+      ];
+      return $this->load->view('layout', $data);
+    } else {
+      $id = $this->input->post('id_categories', TRUE);
+      $code_categories = $this->input->post('code_categories', TRUE);
+      $name_categories = $this->input->post('name_categories', TRUE);
 
-    $data = array(
-      'code_categories' => $code_categories,
-      'name_categories' => $name_categories,
-    );
+      $data = [
+        'code_categories' => $code_categories,
+        'name_categories' => $name_categories,
+      ];
 
-    $where = array(
-      'id_categories' => $id
-    );
+      $where = [
+        'id_categories' => $id
+      ];
 
-    $this->Categories_model->update_data($where, $data, 'categories');
-    $this->session->set_flashdata(
-      'message',
-      '<div class="alert alert-info alert-dismissible fade show" role="alert">
+      $this->Categories_model->update_data($where, $data, 'categories');
+      $this->session->set_flashdata(
+        'message',
+        '<div class="alert alert-info alert-dismissible fade show" role="alert">
         Category Edited Successfully
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>'
-    );
-    redirect('categories');
+      );
+      redirect('categories');
+    }
   }
 
   public function delete($id)
   {
-    $result = $this->Categories_model->delete_data($id);
-    if ($result == true) {
+    $data['categories'] = $this->Categories_model->delete_data($id);
+    if ($data['categories'] == true) {
       $this->session->set_flashdata(
         'message',
         '<div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -85,7 +102,7 @@ class Categories extends CI_Controller
     } else {
       $this->session->set_flashdata(
         'message',
-        '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+        '<div class="alert alert-warning alert-dismissible fade show" role="alert">
         Category Can\'t Be Deleted
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>

@@ -13,8 +13,11 @@ class Dashboard extends CI_Controller
 
   public function index()
   {
-    $data['title'] = 'Dashboard';
-    $data['products'] = $this->Products_model->getProducts('products');
-    $this->load->view('dashboard/view-dashboard', $data);
+    $data = [
+      'title' => 'Dashboard',
+      'content' => 'dashboard/page',
+      'products' => $this->Products_model->getProducts('products')
+    ];
+    $this->load->view('layout', $data);
   }
 }

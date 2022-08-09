@@ -11,8 +11,11 @@ class Items extends CI_Controller
 
   public function index()
   {
-    $data['title'] = 'Items';
-    $data['items'] = $this->Items_model->getItems('items');
-    $this->load->view('items/view-item', $data);
+    $data = [
+      'title' => 'Items',
+      'content' => 'items/page',
+      'items' => $this->Items_model->getItems('items')
+    ];
+    $this->load->view('layout', $data);
   }
 }
