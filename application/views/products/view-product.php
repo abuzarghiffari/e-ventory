@@ -15,6 +15,7 @@
             <?= $title ?>
           </h1>
         </div>
+        <?php echo $this->session->flashdata('message'); ?>
         <?php $this->load->view('products/table-product'); ?>
       </div>
       <!-- End of Content -->

@@ -18,21 +18,26 @@ class Categories extends CI_Controller
 
   public function insert()
   {
-    $data = array(
-      'code_categories' => $this->input->post('code_categories', TRUE),
-      'name_categories' => $this->input->post('name_categories', TRUE)
-    );
-    $this->Categories_model->input_data($data);
-    $this->session->set_flashdata(
-      'message',
-      '<div class="alert alert-success alert-dismissible fade show" role="alert">
+    $this->_rules();
+    if ($this->form_validation->run() == FALSE) {
+      //
+    } else {
+      $data = array(
+        'code_categories' => $this->input->post('code_categories', TRUE),
+        'name_categories' => $this->input->post('name_categories', TRUE)
+      );
+      $this->Categories_model->input_data($data);
+      $this->session->set_flashdata(
+        'message',
+        '<div class="alert alert-success alert-dismissible fade show" role="alert">
         Category Added Successfully
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>'
-    );
-    redirect('categories');
+      );
+      redirect('categories');
+    }
   }
 
   public function update()
@@ -89,5 +94,21 @@ class Categories extends CI_Controller
       );
       redirect('categories');
     }
+  }
+
+  public function _rules()
+  {
+    $this->form_validation->set_rules(
+      'code_categories',
+      'code category',
+      'required'
+    );
+    $this->form_validation->set_rules(
+      'name_categories',
+      'name category',
+      'required'
+    );
+
+    $this->form_validation->set_message('required', 'Please enter your %s');
   }
 }

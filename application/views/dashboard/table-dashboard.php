@@ -30,7 +30,7 @@
                   <td><?= $no++ ?></td>
                   <td><?= $pdr->name_items ?></td>
                   <td><?= $pdr->name_categories ?></td>
-                  <td><?= $pdr->price ?></td>
+                  <td>$<?= $pdr->price ?></td>
                   <td><?= $pdr->stock ?></td>
                   <td>
                     <a href="<?= base_url(); ?>products" class="btn btn-warning btn-sm"><i class="fas fa-eye"></i></a>

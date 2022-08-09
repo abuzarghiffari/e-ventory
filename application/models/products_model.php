@@ -12,4 +12,21 @@ class Products_model extends CI_Model
     $query = $this->db->get();
     return $query->result();
   }
+
+  public function input_data($data)
+  {
+    $this->db->insert('products', $data);
+  }
+
+  public function detail_data($id_products)
+  {
+    $this->db->where('id_products', $id_products);
+    return $this->db->get('products')->row();
+  }
+
+  public function update_data($where, $data, $table)
+  {
+    $this->db->where($where);
+    $this->db->update($table, $data);
+  }
 }

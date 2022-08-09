@@ -1,7 +1,9 @@
 <!-- Tables -->
 <div class="card shadow mb-4">
   <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Table <?= $title ?></h6>
+    <a href="<?= base_url(); ?>products/insert" class="btn btn-primary">
+      <i class="fas fa-plus"></i>
+    </a>
   </div>
   <div class="card-body">
     <div class="table-responsive">
@@ -25,10 +27,10 @@
                 <td><?= $no++ ?></td>
                 <td><?= $pdr->name_items ?></td>
                 <td><?= $pdr->name_categories ?></td>
-                <td><?= $pdr->price ?></td>
+                <td>$<?= $pdr->price ?></td>
                 <td><?= $pdr->stock ?></td>
                 <td>
-                  <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-pen"></i></a>
+                  <a href="<?= base_url(); ?>products/update/<?= $pdr->id_products ?>" class="btn btn-primary btn-sm"><i class="fas fa-pen"></i></a>
                   <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">
                     <i class="fas fa-trash"></i>
                   </a>
