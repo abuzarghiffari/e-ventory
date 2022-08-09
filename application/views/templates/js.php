@@ -22,6 +22,7 @@
 <!-- Page level custom scripts -->
 <script src="<?= base_url(); ?>assets/js/demo/datatables-demo.js"></script>
 
+
 <!-- <script>
   // Example starter JavaScript for disabling form submissions if there are invalid fields
   (function() {
@@ -42,6 +43,8 @@
     }, false);
   })();
 </script> -->
+
+
 </body>
 
 </html>

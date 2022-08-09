@@ -10,4 +10,9 @@ class Items_model extends CI_Model
     $query = $this->db->get();
     return $query->result();
   }
+
+  public function input_data($data)
+  {
+    $this->db->insert('items', $data);
+  }
 }

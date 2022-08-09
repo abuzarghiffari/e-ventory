@@ -12,16 +12,16 @@
         <div class="modal-body">
           <div class="form-group">
             <label for="name">Code Category</label>
-            <input type="text" class="form-control <?= form_error('code_categories') ? 'is-invalid' : ''; ?>" name="code_categories" required>
+            <input type="text" class="form-control" name="code_categories" placeholder="Enter code category" required>
             <div class="invalid-feedback">
-              <?= form_error('code_categories'); ?>
+              Please enter your code category
             </div>
           </div>
           <div class=" form-group">
             <label for="name">Name Category</label>
-            <input type="text" class="form-control <?= form_error('name_categories') ? 'is-invalid' : ''; ?>" name="name_categories" required>
+            <input type="text" class="form-control" name="name_categories" placeholder="Enter name category" required>
             <div class="invalid-feedback">
-              <?= form_error('name_categories'); ?>
+              Please enter your name category
             </div>
           </div>
         </div>
