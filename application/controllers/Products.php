@@ -9,6 +9,7 @@ class Products extends CI_Controller
     $this->load->model('Products_model');
     $this->load->model('Items_model');
     $this->load->model('Categories_model');
+    $this->load->model('Suppliers_model');
   }
 
   public function index()
@@ -29,13 +30,15 @@ class Products extends CI_Controller
         'title' => 'Add Product',
         'content' => 'products/add',
         'items' => $this->Items_model->getItems('items'),
-        'categories' => $this->Categories_model->getCategories('categories')
+        'categories' => $this->Categories_model->getCategories('categories'),
+        'suppliers' => $this->Suppliers_model->getSuppliers('suppliers')
       ];
       $this->load->view('layout', $data);
     } else {
       $data = [
         'id_items' => $this->input->post('id_items', TRUE),
         'id_categories' => $this->input->post('id_categories', TRUE),
+        'id_suppliers' => $this->input->post('id_suppliers', TRUE),
         'price' => $this->input->post('price', TRUE),
         'stock' => $this->input->post('stock', TRUE)
       ];
@@ -62,6 +65,7 @@ class Products extends CI_Controller
         'content' => 'products/edit',
         'items' => $this->Items_model->getItems('items'),
         'categories' => $this->Categories_model->getCategories('categories'),
+        'suppliers' => $this->Suppliers_model->getSuppliers('suppliers'),
         'products' => $this->Products_model->detail_data($id)
       ];
       $this->load->view('layout', $data);
@@ -69,12 +73,14 @@ class Products extends CI_Controller
       $id = $this->input->post('id_products');
       $id_items = $this->input->post('id_items');
       $id_categories = $this->input->post('id_categories');
+      $id_suppliers = $this->input->post('id_suppliers');
       $price = $this->input->post('price');
       $stock = $this->input->post('stock');
 
       $data = [
         'id_items' => $id_items,
         'id_categories' => $id_categories,
+        'id_suppliers' => $id_suppliers,
         'price' => $price,
         'stock' => $stock
       ];
@@ -129,12 +135,17 @@ class Products extends CI_Controller
   {
     $this->form_validation->set_rules(
       'id_items',
-      'name items',
+      'name item',
       'required'
     );
     $this->form_validation->set_rules(
       'id_categories',
-      'name categories',
+      'name category',
+      'required'
+    );
+    $this->form_validation->set_rules(
+      'id_suppliers',
+      'name supplier',
       'required'
     );
     $this->form_validation->set_rules(

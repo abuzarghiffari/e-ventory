@@ -7,6 +7,7 @@ class Products_model extends CI_Model
   {
     $this->db->select('*');
     $this->db->from('products as p');
+    $this->db->join('suppliers as s', 'p.id_suppliers = s.id_suppliers', 'left');
     $this->db->join('items as i', 'p.id_items = i.id_items', 'left');
     $this->db->join('categories as c', 'p.id_categories = c.id_categories', 'left');
     $query = $this->db->get();

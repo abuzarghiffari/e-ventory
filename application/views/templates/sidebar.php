@@ -29,31 +29,28 @@
     Menu
   </div>
 
-  <!-- Nav Item - Products -->
-  <li class="nav-item
-      <?= $this->uri->segment(1) == 'products' ? 'active' : ''; ?>">
-    <a class="nav-link" href="<?= base_url(); ?>products">
-      <i class="fas fa-cog"></i>
-      <span>Products</span>
+  <!-- Nav Item - Pages Collapse Menu -->
+  <li class="nav-item <?= $this->uri->segment(1) == 'products' | $this->uri->segment(1) == 'items' | $this->uri->segment(1) == 'categories' | $this->uri->segment(1) == 'suppliers' ? 'active' : ''; ?>">
+    <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+      <i class="fas fa-fw fa-cog"></i>
+      <span>Master Data</span>
     </a>
-  </li>
-
-  <!-- Nav Item - Items -->
-  <li class="nav-item
-      <?= $this->uri->segment(1) == 'items' ? 'active' : ''; ?>">
-    <a class="nav-link" href="<?= base_url(); ?>items">
-      <i class="fas fa-shopping-basket"></i>
-      <span>Items</span>
-    </a>
-  </li>
-
-  <!-- Nav Item - Categories -->
-  <li class="nav-item
-      <?= $this->uri->segment(1) == 'categories' ? 'active' : ''; ?>">
-    <a class="nav-link" href="<?= base_url(); ?>categories">
-      <i class="fas fa-table"></i>
-      <span>Categories</span>
-    </a>
+    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a class="collapse-item <?= $this->uri->segment(1) == 'products' ? 'active' : ''; ?>" href="<?= base_url(); ?>products">
+          Products
+        </a>
+        <a class="collapse-item <?= $this->uri->segment(1) == 'items' ? 'active' : ''; ?>" href="<?= base_url(); ?>items">
+          Items
+        </a>
+        <a class="collapse-item <?= $this->uri->segment(1) == 'categories' ? 'active' : ''; ?>" href="<?= base_url(); ?>categories">
+          Categories
+        </a>
+        <a class="collapse-item <?= $this->uri->segment(1) == 'suppliers' ? 'active' : ''; ?>" href="<?= base_url(); ?>suppliers">
+          Suppliers
+        </a>
+      </div>
+    </div>
   </li>
 
   <!-- Divider -->

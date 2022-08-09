@@ -30,6 +30,17 @@
         </div>
       </div>
       <div class="form-group">
+        <label for="id_suppliers">Name Supplier</label>
+        <select name="id_suppliers" class="custom-select <?= form_error('id_suppliers') ? 'is-invalid' : ''; ?>" required>
+          <?php foreach ($suppliers as $ctr) : ?>
+            <option value="<?= form_error('id_suppliers') ? set_value('id_suppliers') : $ctr->id_suppliers; ?>"><?= $ctr->name_suppliers; ?></option>
+          <?php endforeach; ?>
+        </select>
+        <div class="invalid-feedback">
+          <?= form_error('id_suppliers'); ?>
+        </div>
+      </div>
+      <div class="form-group">
         <label for="price">Price</label>
         <input type="number" class="form-control <?= form_error('price') ? 'is-invalid' : ''; ?>" name="price" value="<?= form_error('price') ? set_value('price') : $products->price; ?>" required>
         <div class="invalid-feedback">

@@ -9,7 +9,7 @@
       <div class="form-group">
         <label for="id_items">Name Item</label>
         <select name="id_items" class="custom-select <?= form_error('id_items') ? 'is-invalid' : ''; ?>" required>
-          <option value="">-- Select the Items --</option>
+          <option value="">-- Select the Item --</option>
           <?php foreach ($items as $itm) : ?>
             <option value="<?= $itm->id_items ?>" <?= (set_value('id_items') == $itm->id_items) ? 'selected' : ''; ?>><?= $itm->name_items ?></option>
           <?php endforeach; ?>
@@ -21,13 +21,25 @@
       <div class="form-group">
         <label for="id_categories">Name Category</label>
         <select name="id_categories" class="custom-select <?= form_error('id_categories') ? 'is-invalid' : ''; ?>" required>
-          <option value="">-- Select the Categories --</option>
+          <option value="">-- Select the Category --</option>
           <?php foreach ($categories as $ctr) : ?>
             <option value="<?= $ctr->id_categories ?>" <?= (set_value('id_categories') == $ctr->id_categories) ? 'selected' : ''; ?>><?= $ctr->name_categories ?></option>
           <?php endforeach; ?>
         </select>
         <div class="invalid-feedback">
           <?= form_error('id_categories'); ?>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="id_suppliers">Name Supplier</label>
+        <select name="id_suppliers" class="custom-select <?= form_error('id_suppliers') ? 'is-invalid' : ''; ?>" required>
+          <option value="">-- Select the Supplier --</option>
+          <?php foreach ($suppliers as $ctr) : ?>
+            <option value="<?= $ctr->id_suppliers ?>" <?= (set_value('id_suppliers') == $ctr->id_suppliers) ? 'selected' : ''; ?>><?= $ctr->name_suppliers ?></option>
+          <?php endforeach; ?>
+        </select>
+        <div class="invalid-feedback">
+          <?= form_error('id_suppliers'); ?>
         </div>
       </div>
       <div class="form-group">
