@@ -1,18 +1,18 @@
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
+<div data-aos="fade-right" class="d-sm-flex align-items-center justify-content-between mb-4">
   <h1 class="h3 mb-0 text-gray-800">
     <?= $title ?>
   </h1>
 </div>
 <?php echo $this->session->flashdata('message'); ?>
 <!-- Tables -->
-<div class="card shadow mb-4">
+<div data-aos="zoom-in" class="card shadow mb-4">
   <div class="card-header py-3">
     <a href="<?= base_url(); ?>suppliers/insert" class="btn btn-primary">
       <i class="fas fa-plus"></i>
-      add
+      Add
     </a>
-    <a href="<?= base_url(); ?>categories/print" class="btn btn-danger">
-      <i class="fas fa-print"></i> print
+    <a href="<?= base_url(); ?>categories/print" class="btn btn-danger" target="_blank" rel="noreferrer">
+      <i class="fas fa-print"></i> Print
     </a>
   </div>
   <div class="card-body">

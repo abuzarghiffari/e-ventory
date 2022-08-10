@@ -15,7 +15,7 @@
     <div class="text-center">
       <h4>
         <i class='bx bxs-package bx-md align-middle'></i>
-        E-Ventory
+        E-VENTORY
       </h4>
       <p>Jl. Kemana Mana Kita Senang, Pulau Kapuk</p>
       <p>Telp. (XXX)-XXXXXXX</p>

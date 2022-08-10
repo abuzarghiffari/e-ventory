@@ -2,7 +2,7 @@
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url(); ?>">
     <div class="sidebar-brand-icon">
-      <i class='bx bxs-package bx-tada'></i>
+      <i class='bx bxs-package bx-tada '></i>
     </div>
     <div class="sidebar-brand-text mx-1">
       E-Ventory

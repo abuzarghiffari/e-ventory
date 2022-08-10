@@ -15,7 +15,14 @@
 <!-- Page level custom scripts -->
 <script src="<?= base_url(); ?>assets/js/demo/datatables-demo.js"></script>
 
-<!-- Icon box -->
+<!-- animation -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        once: true,
+        duration: 1500
+    });
+</script>
 
 </body>
 
