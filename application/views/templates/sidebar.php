@@ -1,17 +1,13 @@
-<!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-white sidebar sidebar-dark accordion shadow" id="accordionSidebar">
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url(); ?>">
-    <div class="sidebar-brand-icon rotate-n-15">
-      <i class="fas fa-laugh-wink"></i>
+    <div class="sidebar-brand-icon">
+      <i class='bx bxs-package'></i>
     </div>
-    <div class="sidebar-brand-text mx-3">
+    <div class="sidebar-brand-text mx-1">
       E-Ventory
     </div>
   </a>
-
-  <!-- Divider -->
-  <hr class="sidebar-divider my-0" />
 
   <!-- Nav Item - Dashboard -->
   <li class="nav-item
@@ -21,43 +17,43 @@
       <span>Dashboard</span></a>
   </li>
 
-  <!-- Divider -->
-  <hr class="sidebar-divider" />
-
-  <!-- Heading -->
-  <div class="sidebar-heading">
-    Menu
-  </div>
-
-  <!-- Nav Item - Pages Collapse Menu -->
-  <li class="nav-item <?= $this->uri->segment(1) == 'products' | $this->uri->segment(1) == 'items' | $this->uri->segment(1) == 'categories' | $this->uri->segment(1) == 'suppliers' ? 'active' : ''; ?>">
-    <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-      <i class="fas fa-fw fa-cog"></i>
-      <span>Master Data</span>
+  <!-- Nav Item - Products -->
+  <li class="nav-item
+      <?= $this->uri->segment(1) == 'products' ? 'active' : ''; ?>">
+    <a class="nav-link" href="<?= base_url(); ?>products">
+      <i class="fas fa-dolly-flatbed"></i>
+      <span>Product</span>
     </a>
-    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-      <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item <?= $this->uri->segment(1) == 'products' ? 'active' : ''; ?>" href="<?= base_url(); ?>products">
-          Products
-        </a>
-        <a class="collapse-item <?= $this->uri->segment(1) == 'items' ? 'active' : ''; ?>" href="<?= base_url(); ?>items">
-          Items
-        </a>
-        <a class="collapse-item <?= $this->uri->segment(1) == 'categories' ? 'active' : ''; ?>" href="<?= base_url(); ?>categories">
-          Categories
-        </a>
-        <a class="collapse-item <?= $this->uri->segment(1) == 'suppliers' ? 'active' : ''; ?>" href="<?= base_url(); ?>suppliers">
-          Suppliers
-        </a>
-      </div>
-    </div>
   </li>
 
-  <!-- Divider -->
-  <hr class="sidebar-divider d-none d-md-block">
+  <!-- Nav Item - Items -->
+  <li class="nav-item
+      <?= $this->uri->segment(1) == 'items' ? 'active' : ''; ?>">
+    <a class="nav-link" href="<?= base_url(); ?>items">
+      <i class="fas fa-box"></i> <span>Item</span>
+    </a>
+  </li>
+
+  <!-- Nav Item - Categories -->
+  <li class="nav-item
+      <?= $this->uri->segment(1) == 'categories' ? 'active' : ''; ?>">
+    <a class="nav-link" href="<?= base_url(); ?>categories">
+      <i class="fas fa-shapes"></i>
+      <span>Category</span>
+    </a>
+  </li>
+
+  <!-- Nav Item - Suppliers -->
+  <li class="nav-item
+      <?= $this->uri->segment(1) == 'suppliers' ? 'active' : ''; ?>">
+    <a class="nav-link" href="<?= base_url(); ?>suppliers">
+      <i class="fas fa-user fa-table"></i>
+      <span>Supplier</span>
+    </a>
+  </li>
 
   <!-- Sidebar Toggler (Sidebar) -->
-  <div class="text-center d-none d-md-inline">
+  <div class="text-center d-none d-md-inline mt-3">
     <button class="rounded-circle border-0" id="sidebarToggle"></button>
   </div>
 </ul>

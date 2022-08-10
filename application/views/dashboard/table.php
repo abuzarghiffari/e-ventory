@@ -3,8 +3,8 @@
   <div class="card shadow mb-4">
     <!-- Card Header - Dropdown -->
     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-      <h6 class="m-0 font-weight-bold text-dark">
-        Product Tables
+      <h6 class="m-0 font-weight-bold text-primary">
+        Dashboard Tables
       </h6>
     </div>
     <!-- Card Body -->
@@ -14,11 +14,9 @@
           <thead>
             <tr>
               <th>No</th>
-              <th>Name Items</th>
-              <th>Name Categories</th>
-              <th>Price</th>
-              <th>Stock</th>
-              <th>Detail</th>
+              <th>Item Name</th>
+              <th>Category Item</th>
+              <th>Supplier Name</th>
             </tr>
           </thead>
           <tbody>
@@ -29,11 +27,7 @@
                 <td><?= $no++ ?></td>
                 <td><?= $pdr->name_items ?></td>
                 <td><?= $pdr->name_categories ?></td>
-                <td>$<?= $pdr->price ?></td>
-                <td><?= $pdr->stock ?></td>
-                <td>
-                  <a href="<?= base_url(); ?>products" class="btn btn-success btn-circle btn-sm"><i class="fas fa-eye"></i></a>
-                </td>
+                <td><?= $pdr->name_suppliers ?></td>
               </tr>
             <?php endforeach; ?>
           </tbody>

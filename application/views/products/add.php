@@ -7,7 +7,7 @@
   <div class="card-body">
     <form action="<?= base_url(); ?>products/insert" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
       <div class="form-group">
-        <label for="id_items">Name Item</label>
+        <label for="id_items">Item Name</label>
         <select name="id_items" class="custom-select <?= form_error('id_items') ? 'is-invalid' : ''; ?>" required>
           <option value="">-- Select the Item --</option>
           <?php foreach ($items as $itm) : ?>
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="id_categories">Name Category</label>
+        <label for="id_categories">Category Name</label>
         <select name="id_categories" class="custom-select <?= form_error('id_categories') ? 'is-invalid' : ''; ?>" required>
           <option value="">-- Select the Category --</option>
           <?php foreach ($categories as $ctr) : ?>
@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="id_suppliers">Name Supplier</label>
+        <label for="id_suppliers">Supplier Name</label>
         <select name="id_suppliers" class="custom-select <?= form_error('id_suppliers') ? 'is-invalid' : ''; ?>" required>
           <option value="">-- Select the Supplier --</option>
           <?php foreach ($suppliers as $ctr) : ?>

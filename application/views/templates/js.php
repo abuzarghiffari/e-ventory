@@ -14,6 +14,11 @@
 
 <!-- Page level custom scripts -->
 <script src="<?= base_url(); ?>assets/js/demo/datatables-demo.js"></script>
+
+<!-- Icon box -->
+<script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+
+
 </body>
 
 </html>

@@ -7,7 +7,7 @@
   <div class="card-body">
     <form action="<?= base_url(); ?>products/update/<?= $products->id_products; ?>" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
       <div class="form-group">
-        <label for="id_items">Name Item</label>
+        <label for="id_items">Item Name</label>
         <input type="hidden" name="id_products" value="<?= $products->id_products; ?>">
         <select name="id_items" class="custom-select <?= form_error('id_items') ? 'is-invalid' : ''; ?>" required>
           <?php foreach ($items as $itm) : ?>
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="id_categories">Name Category</label>
+        <label for="id_categories">Category Name</label>
         <select name="id_categories" class="custom-select <?= form_error('id_categories') ? 'is-invalid' : ''; ?>" required>
           <?php foreach ($categories as $ctr) : ?>
             <option value="<?= form_error('id_categories') ? set_value('id_categories') : $ctr->id_categories; ?>"><?= $ctr->name_categories; ?></option>
@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="id_suppliers">Name Supplier</label>
+        <label for="id_suppliers">Supplier Name</label>
         <select name="id_suppliers" class="custom-select <?= form_error('id_suppliers') ? 'is-invalid' : ''; ?>" required>
           <?php foreach ($suppliers as $ctr) : ?>
             <option value="<?= form_error('id_suppliers') ? set_value('id_suppliers') : $ctr->id_suppliers; ?>"><?= $ctr->name_suppliers; ?></option>

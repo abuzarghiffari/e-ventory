@@ -17,8 +17,8 @@
         <thead>
           <tr>
             <th>No</th>
-            <th>Code Suppliers</th>
-            <th>Name Suppliers</th>
+            <th>Supplier Code</th>
+            <th>Supplier Name</th>
             <th>Action</th>
           </tr>
         </thead>

@@ -17,8 +17,8 @@
         <thead>
           <tr>
             <th>No</th>
-            <th>Name Items</th>
-            <th>Name Categories</th>
+            <th>Item Name</th>
+            <th>Category Name</th>
             <th>Price</th>
             <th>Stock</th>
             <th>Action</th>
