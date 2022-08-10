@@ -128,4 +128,13 @@ class Categories extends CI_Controller
 
     $this->form_validation->set_message('required', 'Please enter your %s');
   }
+
+  public function print()
+  {
+    $data = [
+      'title' => 'Print Categories',
+      'categories' => $this->Categories_model->getCategories('categories')
+    ];
+    $this->load->view('categories/print', $data);
+  }
 }

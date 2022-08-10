@@ -2,7 +2,7 @@
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url(); ?>">
     <div class="sidebar-brand-icon">
-      <i class='bx bxs-package'></i>
+      <i class='bx bxs-package bx-tada'></i>
     </div>
     <div class="sidebar-brand-text mx-1">
       E-Ventory
@@ -30,7 +30,8 @@
   <li class="nav-item
       <?= $this->uri->segment(1) == 'items' ? 'active' : ''; ?>">
     <a class="nav-link" href="<?= base_url(); ?>items">
-      <i class="fas fa-box"></i> <span>Item</span>
+      <i class="fas fa-box"></i>
+      <span>Item</span>
     </a>
   </li>
 

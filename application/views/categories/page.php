@@ -9,6 +9,10 @@
   <div class="card-header py-3">
     <a href="<?= base_url(); ?>categories/insert" class="btn btn-primary">
       <i class="fas fa-plus"></i>
+      add
+    </a>
+    <a href="<?= base_url(); ?>categories/print" class="btn btn-danger">
+      <i class="fas fa-print"></i> print
     </a>
   </div>
   <div class="card-body">

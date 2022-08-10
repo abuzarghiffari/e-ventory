@@ -128,4 +128,14 @@ class Suppliers extends CI_Controller
 
     $this->form_validation->set_message('required', 'Please enter your %s');
   }
+
+  public function print()
+  {
+
+    $data = [
+      'title' => 'Print suppliers',
+      'suppliers' => $this->suppliers_model->getsuppliers('suppliers')
+    ];
+    $this->load->view('suppliers/print', $data);
+  }
 }
