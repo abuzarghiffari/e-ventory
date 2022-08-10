@@ -113,6 +113,15 @@ class Items extends CI_Controller
     }
   }
 
+  public function print()
+  {
+    $data = [
+      'title' => 'Print Items',
+      'items' => $this->Items_model->getItems('items')
+    ];
+    $this->load->view('items/print', $data);
+  }
+
   public function _rules()
   {
     $this->form_validation->set_rules(

@@ -48,14 +48,14 @@
   <li class="nav-item
       <?= $this->uri->segment(1) == 'suppliers' ? 'active' : ''; ?>">
     <a class="nav-link" href="<?= base_url(); ?>suppliers">
-      <i class="fas fa-user fa-table"></i>
+      <i class="fas fa-user"></i>
       <span>Supplier</span>
     </a>
   </li>
 
   <!-- Sidebar Toggler (Sidebar) -->
   <div class="text-center d-none d-md-inline mt-3">
-    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    <button class="rounded-toggle rounded-circle border-0" id="sidebarToggle"></button>
   </div>
 </ul>
 <!-- End of Sidebar -->
