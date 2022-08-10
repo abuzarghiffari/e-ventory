@@ -9,21 +9,47 @@
 }
 
 .navbar {
-  border-bottom: 1px solid #E0E0E0; }
+  border-bottom: 1px solid #dddfeb; }
 .sidebar {
-  border-right: 1px solid #E0E0E0; }
+  border-right: 1px solid #dddfeb; }
 
 .sidebar-brand-icon i,
 .sidebar-brand-text,
 .nav-item span, 
 .nav-item i {
-  color: #697586 !important; }
+  color: #616161 !important; }
 
 .nav-item span {
   font-size: 14px !important; }
 .nav-item i {
   font-size: 16px !important; }
 
+.nav-item.active span, 
+.nav-item.active i {
+  color: #FFFFFF !important; }
+
+.nav-item.active span, 
+.nav-item:hover span {
+  font-weight: 500; }
+
 .nav-item.active,
-.rounded-circle  {
-  background-color: #bdc9da !important; }
+.rounded-toggle  {
+  background-color: #4A63FD !important; }
+.rounded-toggle {
+  opacity: 80%; }
+
+.card {
+  overflow: hidden;
+  border-radius: 20px; }
+.bg-icon i {
+  font-size: 50px;
+  color: #FFFFFF; }
+
+.bg-products {
+  background: linear-gradient(180deg, #FCC736 -11.21%, #FC992E 49.14%, #FE7539 109.48%); }
+.bg-items {
+  background: linear-gradient(178.05deg, #3DAFFF 0.94%, #2F80F3 57.46%, #2050F4 127.04%); }
+.bg-categories {
+  background: linear-gradient(180deg, #2FE1FF -11.21%, #43CDF4 49.13%, #43CDF4 49.14%, #1EA6E0 84.21%); }
+.bg-suppliers {
+  background: linear-gradient(180deg, #42FF75 -11.21%, #48C684 49.14%, #12845F 109.48%); }

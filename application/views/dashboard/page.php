@@ -8,19 +8,19 @@
 <div class="row ">
   <!-- Products Card -->
   <div class="col-xl-3 col-md-6 mb-4">
-    <div class="card border-left-primary shadow h-100 py-2">
+    <div class="card bg-products h-100 py-2">
       <div class="card-body">
         <div class="row no-gutters align-items-center">
           <div class="col mr-2">
-            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-              Products
+            <div class="text-md font-weight-bold text-white text-uppercase mb-1">
+              Product<?= $this->db->count_all_results('products') > 1 ? 's' : '' ?>
             </div>
-            <div class="h5 mb-0 font-weight-bold text-gray-800">
+            <div class="h3 mb-0 font-weight-bold text-white">
               <?= $this->db->count_all_results('products'); ?>
             </div>
           </div>
-          <div class="col-auto">
-            <i class="fas fa-cog fa-2x text-gray-300"></i>
+          <div class="bg-icon col-auto">
+            <i class="fas fa-dolly-flatbed fa-2x"></i>
           </div>
         </div>
       </div>
@@ -28,19 +28,19 @@
   </div>
   <!-- Items Card -->
   <div class="col-xl-3 col-md-6 mb-4">
-    <div class="card border-left-success shadow h-100 py-2">
+    <div class="card bg-items shadow h-100 py-2">
       <div class="card-body">
         <div class="row no-gutters align-items-center">
           <div class="col mr-2">
-            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-              Items
+            <div class="text-md font-weight-bold text-white text-uppercase mb-1">
+              Item<?= $this->db->count_all_results('items') > 1 ? 's' : '' ?>
             </div>
-            <div class="h5 mb-0 font-weight-bold text-gray-800">
+            <div class="h3 mb-0 font-weight-bold text-white">
               <?= $this->db->count_all_results('items'); ?>
             </div>
           </div>
-          <div class="col-auto">
-            <i class="fas fa-shopping-basket fa-2x text-gray-300"></i>
+          <div class="bg-icon col-auto">
+            <i class="fas fa-box fa-2x"></i>
           </div>
         </div>
       </div>
@@ -48,19 +48,19 @@
   </div>
   <!-- Categories Card -->
   <div class="col-xl-3 col-md-6 mb-4">
-    <div class="card border-left-info shadow h-100 py-2">
+    <div class="card bg-categories shadow h-100 py-2">
       <div class="card-body">
         <div class="row no-gutters align-items-center">
           <div class="col mr-2">
-            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-              Categories
+            <div class="text-md font-weight-bold text-white text-uppercase mb-1">
+              Categor<?= $this->db->count_all_results('categories') > 1 ? 'ies' : 'y' ?>
             </div>
-            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+            <div class="h3 mb-0 mr-3 font-weight-bold text-white">
               <?= $this->db->count_all_results('categories'); ?>
             </div>
           </div>
-          <div class="col-auto">
-            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+          <div class="bg-icon col-auto">
+            <i class="fas fa-shapes fa-2x"></i>
           </div>
         </div>
       </div>
@@ -68,19 +68,19 @@
   </div>
   <!-- Suppliers Card -->
   <div class="col-xl-3 col-md-6 mb-4">
-    <div class="card border-left-warning shadow h-100 py-2">
+    <div class="card bg-suppliers shadow h-100 py-2">
       <div class="card-body">
         <div class="row no-gutters align-items-center">
           <div class="col mr-2">
-            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-              Suppliers
+            <div class="text-md font-weight-bold text-white text-uppercase mb-1">
+              Supplier<?= $this->db->count_all_results('suppliers') > 1 ? 's' : '' ?>
             </div>
-            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+            <div class="h3 mb-0 mr-3 font-weight-bold text-white">
               <?= $this->db->count_all_results('suppliers'); ?>
             </div>
           </div>
-          <div class="col-auto">
-            <i class="fas fa-user fa-2x text-gray-300"></i>
+          <div class="bg-icon col-auto">
+            <i class="fas fa-user fa-2x"></i>
           </div>
         </div>
       </div>
@@ -107,11 +107,11 @@
         </div>
         <div class="mt-4 text-center small">
           <span class="mr-1">
-            <i class="fas fa-circle text-primary"></i>
+            <i class="fas fa-circle text-warning"></i>
             Products
           </span>
           <span class="mr-1">
-            <i class="fas fa-circle text-success"></i>
+            <i class="fas fa-circle text-primary"></i>
             Items
           </span>
           <span class="mr-1">
@@ -119,7 +119,7 @@
             Categories
           </span>
           <span class="mr-1">
-            <i class="fas fa-circle text-warning"></i>
+            <i class="fas fa-circle text-success"></i>
             Suppliers
           </span>
         </div>
@@ -149,8 +149,8 @@
           <?= $this->db->count_all_results('categories'); ?>,
           <?= $this->db->count_all_results('suppliers'); ?>
         ],
-        backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e'],
-        hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+        backgroundColor: ['#F4B408', '#296FF3', '#43C3EF', '#1CB788'],
+        hoverBackgroundColor: ['#C59411', '#1A50B7', '#2E9BC0', '#148E69'],
         hoverBorderColor: "rgba(234, 236, 244, 1)",
       }],
     },

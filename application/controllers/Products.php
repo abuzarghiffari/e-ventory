@@ -131,6 +131,15 @@ class Products extends CI_Controller
     }
   }
 
+  public function print()
+  {
+    $data = [
+      'title' => 'Print Products',
+      'products' => $this->Products_model->getProducts('products')
+    ];
+    $this->load->view('products/print', $data);
+  }
+
   public function _rules()
   {
     $this->form_validation->set_rules(
