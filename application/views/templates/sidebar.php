@@ -1,4 +1,4 @@
-<ul class="navbar-nav bg-white sidebar sidebar-dark accordion shadow" id="accordionSidebar">
+<ul class="navbar-nav sidebar bg-white sidebar-dark accordion" id="accordionSidebar">
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url(); ?>">
     <div class="sidebar-brand-icon">
@@ -21,7 +21,7 @@
   <li class="nav-item
       <?= $this->uri->segment(1) == 'products' ? 'active' : ''; ?>">
     <a class="nav-link" href="<?= base_url(); ?>products">
-      <i class="fas fa-dolly-flatbed"></i>
+      <i class="fas fa-fw fa-dolly-flatbed"></i>
       <span>Product</span>
     </a>
   </li>
@@ -30,7 +30,7 @@
   <li class="nav-item
       <?= $this->uri->segment(1) == 'items' ? 'active' : ''; ?>">
     <a class="nav-link" href="<?= base_url(); ?>items">
-      <i class="fas fa-box"></i>
+      <i class="fas fa-fw fa-box"></i>
       <span>Item</span>
     </a>
   </li>
@@ -39,7 +39,7 @@
   <li class="nav-item
       <?= $this->uri->segment(1) == 'categories' ? 'active' : ''; ?>">
     <a class="nav-link" href="<?= base_url(); ?>categories">
-      <i class="fas fa-shapes"></i>
+      <i class="fas fa-fw fa-shapes"></i>
       <span>Category</span>
     </a>
   </li>
@@ -48,7 +48,7 @@
   <li class="nav-item
       <?= $this->uri->segment(1) == 'suppliers' ? 'active' : ''; ?>">
     <a class="nav-link" href="<?= base_url(); ?>suppliers">
-      <i class="fas fa-user"></i>
+      <i class="fas fa-fw fa-user"></i>
       <span>Supplier</span>
     </a>
   </li>

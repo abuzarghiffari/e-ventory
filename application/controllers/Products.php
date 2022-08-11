@@ -15,7 +15,7 @@ class Products extends CI_Controller
   public function index()
   {
     $data = [
-      'title' => 'Products',
+      'title' => 'Product',
       'content' => 'products/page',
       'products' => $this->Products_model->getProducts('products')
     ];
@@ -134,13 +134,13 @@ class Products extends CI_Controller
   public function print()
   {
     $data = [
-      'title' => 'Print Products',
+      'title' => 'Print Product',
       'products' => $this->Products_model->getProducts('products')
     ];
     $this->load->view('products/print', $data);
   }
 
-  public function _rules()
+  private function _rules()
   {
     $this->form_validation->set_rules(
       'id_items',
@@ -160,12 +160,12 @@ class Products extends CI_Controller
     $this->form_validation->set_rules(
       'price',
       'price',
-      'required'
+      'required|max_length[15]'
     );
     $this->form_validation->set_rules(
       'stock',
       'stock',
-      'required'
+      'required|max_length[15]'
     );
 
     $this->form_validation->set_message('required', 'Please enter your %s');

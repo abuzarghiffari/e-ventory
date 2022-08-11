@@ -12,7 +12,7 @@ class Categories extends CI_Controller
   public function index()
   {
     $data = [
-      'title' => 'Categories',
+      'title' => 'Category',
       'content' => 'categories/page',
       'categories' => $this->Categories_model->getCategories('categories')
     ];
@@ -113,28 +113,28 @@ class Categories extends CI_Controller
     }
   }
 
-  public function _rules()
+  public function print()
+  {
+    $data = [
+      'title' => 'Print Category',
+      'categories' => $this->Categories_model->getCategories('categories')
+    ];
+    $this->load->view('categories/print', $data);
+  }
+
+  private function _rules()
   {
     $this->form_validation->set_rules(
       'code_categories',
       'code category',
-      'required'
+      'required|max_length[15]'
     );
     $this->form_validation->set_rules(
       'name_categories',
       'name category',
-      'required'
+      'required|max_length[15]'
     );
 
     $this->form_validation->set_message('required', 'Please enter your %s');
-  }
-
-  public function print()
-  {
-    $data = [
-      'title' => 'Print Categories',
-      'categories' => $this->Categories_model->getCategories('categories')
-    ];
-    $this->load->view('categories/print', $data);
   }
 }

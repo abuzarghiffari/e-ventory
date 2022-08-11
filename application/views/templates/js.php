@@ -15,13 +15,35 @@
 <!-- Page level custom scripts -->
 <script src="<?= base_url(); ?>assets/js/demo/datatables-demo.js"></script>
 
-<!-- animation -->
+<!-- SweetAlert2 -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  $('.delete').on('click', function(e) {
+    e.preventDefault();
+    const href = $(this).attr('href');
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "To Delete <?= $title ?>",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#e64738',
+      cancelButtonColor: '#4168dd',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.value) {
+        document.location.href = href;
+      }
+    });
+  });
+</script>
+
+<!-- AOS animation -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    AOS.init({
-        once: true,
-        duration: 1500
-    });
+  AOS.init({
+    once: true,
+    duration: 1500
+  });
 </script>
 
 </body>

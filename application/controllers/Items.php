@@ -12,7 +12,7 @@ class Items extends CI_Controller
   public function index()
   {
     $data = [
-      'title' => 'Items',
+      'title' => 'Item',
       'content' => 'items/page',
       'items' => $this->Items_model->getItems('items')
     ];
@@ -116,23 +116,24 @@ class Items extends CI_Controller
   public function print()
   {
     $data = [
-      'title' => 'Print Items',
+      'title' => 'Print Item',
       'items' => $this->Items_model->getItems('items')
     ];
     $this->load->view('items/print', $data);
   }
 
-  public function _rules()
+  private function _rules()
   {
     $this->form_validation->set_rules(
       'code_items',
       'code item',
-      'required'
+      'required|max_length[15]',
+
     );
     $this->form_validation->set_rules(
       'name_items',
       'name item',
-      'required'
+      'required|max_length[15]'
     );
 
     $this->form_validation->set_message('required', 'Please enter your %s');

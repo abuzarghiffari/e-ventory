@@ -1,8 +1,3 @@
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
-  <h1 class="h3 mb-0 text-gray-800">
-    <?= $title ?>
-  </h1>
-</div>
 <div class="card shadow mb-4 mt-2">
   <div class="card-body">
     <form action="<?= base_url(); ?>products/update/<?= $products->id_products; ?>" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
@@ -55,7 +50,7 @@
         </div>
       </div>
       <div class="form-footer">
-        <a href="<?= base_url(); ?>products" class="btn btn-warning mr-2">Back</a>
+        <a href="<?= base_url(); ?>products" class="btn btn-warning">Back</a>
         <button type="submit" class="btn btn-primary">Update</button>
       </div>
     </form>

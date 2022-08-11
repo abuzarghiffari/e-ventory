@@ -4,7 +4,7 @@
     <div class="copyright text-center my-auto">
       <span>Copyright
         &copy;
-        E-VENTORY 2022
+        E-VENTORY <?= date('Y') ?>
       </span>
     </div>
   </div>

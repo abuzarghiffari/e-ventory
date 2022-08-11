@@ -12,7 +12,7 @@ class Suppliers extends CI_Controller
   public function index()
   {
     $data = [
-      'title' => 'Suppliers',
+      'title' => 'Supplier',
       'content' => 'suppliers/page',
       'suppliers' => $this->Suppliers_model->getSuppliers('suppliers')
     ];
@@ -113,29 +113,28 @@ class Suppliers extends CI_Controller
     }
   }
 
-  public function _rules()
+  public function print()
+  {
+    $data = [
+      'title' => 'Print Supplier',
+      'suppliers' => $this->suppliers_model->getsuppliers('suppliers')
+    ];
+    $this->load->view('suppliers/print', $data);
+  }
+
+  private function _rules()
   {
     $this->form_validation->set_rules(
       'code_suppliers',
       'code supplier',
-      'required'
+      'required|max_length[15]'
     );
     $this->form_validation->set_rules(
       'name_suppliers',
       'name supplier',
-      'required'
+      'required|max_length[15]'
     );
 
     $this->form_validation->set_message('required', 'Please enter your %s');
-  }
-
-  public function print()
-  {
-
-    $data = [
-      'title' => 'Print suppliers',
-      'suppliers' => $this->suppliers_model->getsuppliers('suppliers')
-    ];
-    $this->load->view('suppliers/print', $data);
   }
 }
