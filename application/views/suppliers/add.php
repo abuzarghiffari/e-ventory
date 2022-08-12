@@ -3,7 +3,7 @@
     <form action="<?= base_url(); ?>suppliers/insert" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
       <div class="form-group">
         <label for="code_suppliers">Supplier Code</label>
-        <input type="text" class="form-control <?= form_error('code_suppliers') ? 'is-invalid' : ''; ?>" name="code_suppliers" value="<?= set_value('code_suppliers'); ?>" required>
+        <input type="text" class="form-control <?= form_error('code_suppliers') ? 'is-invalid' : ''; ?>" name="code_suppliers" value="<?= codeSupplierAutomation(); ?>" readonly>
         <div class="invalid-feedback">
           <?= form_error('code_suppliers'); ?>
         </div>

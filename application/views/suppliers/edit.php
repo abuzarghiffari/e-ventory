@@ -4,7 +4,7 @@
       <div class="form-group">
         <label for="code_suppliers">Supplier Code</label>
         <input type="hidden" name="id_suppliers" value="<?= $suppliers->id_suppliers; ?>">
-        <input type="text" class="form-control <?= form_error('code_suppliers') ? 'is-invalid' : ''; ?>" name="code_suppliers" value="<?= form_error('code_suppliers') ? set_value('code_suppliers') : $suppliers->code_suppliers; ?>" required>
+        <input type="text" class="form-control <?= form_error('code_suppliers') ? 'is-invalid' : ''; ?>" name="code_suppliers" value="<?= form_error('code_suppliers') ? set_value('code_suppliers') : $suppliers->code_suppliers; ?>" readonly>
         <div class="invalid-feedback">
           <?= form_error('code_suppliers'); ?>
         </div>
