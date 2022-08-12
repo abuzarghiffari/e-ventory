@@ -4,7 +4,7 @@
       <div class="form-group">
         <label for="code_items">Item Code</label>
         <input type="hidden" name="id_items" value="<?= $items->id_items; ?>">
-        <input type="text" class="form-control <?= form_error('code_items') ? 'is-invalid' : ''; ?>" name="code_items" value="<?= form_error('code_items') ? set_value('code_items') : $items->code_items; ?>" required>
+        <input type="text" class="form-control <?= form_error('code_items') ? 'is-invalid' : ''; ?>" name="code_items" value="<?= form_error('code_items') ? set_value('code_items') : $items->code_items; ?>" readonly>
         <div class="invalid-feedback">
           <?= form_error('code_items'); ?>
         </div>

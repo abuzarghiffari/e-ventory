@@ -18,7 +18,7 @@
           <tr>
             <th>No</th>
             <th>Item Name</th>
-            <th>Category Name</th>
+            <th>Category Item</th>
             <th>Price</th>
             <th>Stock</th>
             <th>Action</th>

@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="id_categories">Category Name</label>
+        <label for="id_categories">Category Item</label>
         <select name="id_categories" class="custom-select <?= form_error('id_categories') ? 'is-invalid' : ''; ?>" required>
           <?php foreach ($categories as $ctr) : ?>
             <option value="<?= form_error('id_categories') ? set_value('id_categories') : $ctr->id_categories; ?>"><?= $ctr->name_categories; ?></option>
