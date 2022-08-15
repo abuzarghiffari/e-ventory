@@ -6,7 +6,7 @@
         <input type="hidden" name="id_products" value="<?= $products->id_products; ?>">
         <select name="id_items" class="custom-select <?= form_error('id_items') ? 'is-invalid' : ''; ?>" required>
           <?php foreach ($items as $itm) : ?>
-            <option value="<?= form_error('id_items') ? set_value('id_items') : $itm->id_items ?>"><?= $itm->name_items ?></option>
+            <option value="<?= $itm->id_items ?>" <?= ($itm->id_items == $products->id_items) ? 'selected' : ''; ?>><?= $itm->name_items ?></option>
           <?php endforeach; ?>
         </select>
         <div class=" invalid-feedback">
@@ -17,7 +17,7 @@
         <label for="id_categories">Category Item</label>
         <select name="id_categories" class="custom-select <?= form_error('id_categories') ? 'is-invalid' : ''; ?>" required>
           <?php foreach ($categories as $ctr) : ?>
-            <option value="<?= form_error('id_categories') ? set_value('id_categories') : $ctr->id_categories; ?>"><?= $ctr->name_categories; ?></option>
+            <option value="<?= $ctr->id_categories; ?>" <?= ($ctr->id_categories == $products->id_categories) ? 'selected' : ''; ?>><?= $ctr->name_categories; ?></option>
           <?php endforeach; ?>
         </select>
         <div class="invalid-feedback">
@@ -27,8 +27,8 @@
       <div class="form-group">
         <label for="id_suppliers">Supplier Name</label>
         <select name="id_suppliers" class="custom-select <?= form_error('id_suppliers') ? 'is-invalid' : ''; ?>" required>
-          <?php foreach ($suppliers as $ctr) : ?>
-            <option value="<?= form_error('id_suppliers') ? set_value('id_suppliers') : $ctr->id_suppliers; ?>"><?= $ctr->name_suppliers; ?></option>
+          <?php foreach ($suppliers as $spl) : ?>
+            <option value="<?= $spl->id_suppliers; ?>" <?= ($spl->id_suppliers == $products->id_suppliers) ? 'selected' : ''; ?>><?= $spl->name_suppliers; ?></option>
           <?php endforeach; ?>
         </select>
         <div class="invalid-feedback">

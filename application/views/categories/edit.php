@@ -4,7 +4,7 @@
       <div class="form-group">
         <label for="code_categories">Category Code</label>
         <input type="hidden" name="id_categories" value="<?= $categories->id_categories; ?>">
-        <input type="text" class="form-control <?= form_error('code_categories') ? 'is-invalid' : ''; ?>" name="code_categories" value="<?= form_error('code_categories') ? set_value('code_categories') : $categories->code_categories; ?>" required>
+        <input type="text" class="form-control <?= form_error('code_categories') ? 'is-invalid' : ''; ?>" name="code_categories" value="<?= form_error('code_categories') ? set_value('code_categories') : $categories->code_categories; ?>" readonly>
         <div class="invalid-feedback">
           <?= form_error('code_categories'); ?>
         </div>

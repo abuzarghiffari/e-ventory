@@ -3,7 +3,7 @@
     <form action="<?= base_url(); ?>categories/insert" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
       <div class="form-group">
         <label for="code_categories">Category Code</label>
-        <input type="text" class="form-control <?= form_error('code_categories') ? 'is-invalid' : ''; ?>" name="code_categories" value="<?= set_value('code_categories'); ?>" required>
+        <input type="text" class="form-control <?= form_error('code_categories') ? 'is-invalid' : ''; ?>" name="code_categories" value="<?= codeCategoryAutomation(); ?>" readonly>
         <div class="invalid-feedback">
           <?= form_error('code_categories'); ?>
         </div>
